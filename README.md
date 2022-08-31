@@ -1,0 +1,1 @@
+wring script on bash
