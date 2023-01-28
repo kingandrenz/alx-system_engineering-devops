@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Get the process ID of the 7-highlander script
+highlander_pid=$(pgrep -f "7-highlander")
+
+# Kill the process
+kill $highlander_pid
+

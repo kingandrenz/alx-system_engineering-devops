@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Use the pgrep command to find the PID of processes whose name contain the word bash
+# -fl: display full format including command name
+pids=$(pgrep -fl bash)
+
+# Iterate through each line of the output
+IFS=$'\n'
+for line in $pids
+do
+  # Split the line into fields
+  fields=($line)
+  echo "PID: ${fields[0]}, Process Name: ${fields[1]}"
+done
+

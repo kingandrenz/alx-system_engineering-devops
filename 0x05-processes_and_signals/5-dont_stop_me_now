@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Get the process id of the script
+pid=$(ps -ef | grep "4-to_infinity_and_beyond" | grep -v "grep" | awk '{print $2}')
+
+# Kill the process
+kill $pid
+
+echo "4-to_infinity_and_beyond process has been stopped"
+
