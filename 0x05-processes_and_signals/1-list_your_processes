@@ -1,7 +1,9 @@
-#!/bin/bash
-# Use the ps command with options to show all processes, for all users, including those which might not have a TTY
-# -a: show all processes
-# -x: display in a user-oriented format
-# -u: show process hierarchy
-ps -axuf
+#!/usr/bin/env bash
+# This script displays list of currently running processes
+# Must show all processes, for all users, including those which might not have a TTY
+# Display a user-oriented format
+# Show process hierarchy
+
+ps -a -x -u -f
+
 
