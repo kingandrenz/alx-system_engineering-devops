@@ -1,8 +1,7 @@
 #!/bin/bash
-
 # Use the ps command with options to show all processes, for all users, including those which might not have a TTY
-# -e: show all processes
-# -f: display in a user-oriented format
-# -H: show process hierarchy
-ps -efH
+# -a: show all processes
+# -x: display in a user-oriented format
+# -u: show process hierarchy
+ps -axuf
 
