@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-
 # Use the ps command with options to show all processes, for all users, including those which might not have a TTY
 # -e: show all processes
 # -f: display in a user-oriented format
 # -H: show process hierarchy
 # shellcheck disable=SC2009
-ps -efH | grep -w "bash"
+
+./1-list_your_processes | grep "bash"

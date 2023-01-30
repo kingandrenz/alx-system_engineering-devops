@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#this script displays a statement indefinety
 while true; do
     echo "To infinity and beyond"
     sleep 2

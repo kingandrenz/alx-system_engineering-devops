@@ -1,4 +1,4 @@
-ginclude <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -23,14 +23,14 @@ int main(void)
 
 	for (i = 0; i < 5; i++)
 	{
-		zombies[i] = fork();
-		if (zombies[i] == 0)
+		zombie[i] = fork();
+		if (zombie[i] == 0)
 		{
 			exit(0);
 		}
 		else
 		{
-			printf("Zombie process created, PID: %d\n", zombies[i]);
+			printf("Zombie process created, PID: %d\n", zombie[i]);
 		}
 	}
 
