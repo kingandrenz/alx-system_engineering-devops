@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Get the process id of the script
 pid=$(ps -ef | grep "7-highlander" | grep -v "grep" | awk '{print $2}')
