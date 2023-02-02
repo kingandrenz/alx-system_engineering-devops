@@ -7,7 +7,7 @@ if input.nil?
   exit
 end
 
-regex = /^[A-Z]{2}\d{4}[A-Z]{2}$/
+regex = /^h[b{2,}]t[n]$/
 
 if input.match?(regex)
   puts "Match found"
