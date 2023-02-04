@@ -1,20 +1,7 @@
-#!/bin/env bash
-# Check if the script is run as root
-if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root" 
-   exit 1
-fi
-
-# Backup the current /etc/hosts file
-cp /etc/hosts /etc/hosts.bak
-
-# Replace the IP of localhost to 127.0.0.2
-sed -i 's/127.0.0.1/127.0.0.2/g' /etc/hosts
-
-# Add the mapping for facebook.com to 8.8.8.8
-echo "8.8.8.8 facebook.com" >> /etc/hosts
-
-# Verify the changes
-ping localhost -c 1
-ping facebook.com -c 1
+#!/usr/bin/env bash
+# Bash script that configures a Ubuntu server to resolve localhost to 127.0.0.2 and facebook.com to 8.8.8.8.
+cp /etc/hosts ~/hosts.new
+sed -i s/127.0.0.1/127.0.0.2/ ~/hosts.new
+sed '/127.0.0.2/ a 8.8.8.8       facebook.com' ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
 

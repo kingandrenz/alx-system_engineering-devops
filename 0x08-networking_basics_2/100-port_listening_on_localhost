@@ -1,5 +1,5 @@
 #!/bin/env bash
-#this script list port 98 0n local host
+# This script list port 98 0n local host
 
 nc -l 98
 
