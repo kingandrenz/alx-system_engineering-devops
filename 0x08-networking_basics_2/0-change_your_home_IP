@@ -1,18 +1,14 @@
 #!/bin/env bash
 #This script configures an Ubuntu server with the below requirements
 
-# Check if the script is being run as root
 if [ "$(id -u)" != "0" ]; then
   echo "This script must be run as root"
   exit 1
 fi
 
-# Replace the IP for localhost in /etc/hosts
 sed -i 's/127.0.0.1\tlocalhost/127.0.0.2\tlocalhost/' /etc/hosts
 
-# Append the IP for facebook.com in /etc/hosts
 echo "8.8.8.8 facebook.com" >> /etc/hosts
 
-# Restart the DNS cache to reflect changes
 systemctl restart NetworkManager
 
