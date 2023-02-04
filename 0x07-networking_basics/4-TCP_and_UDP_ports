@@ -1,0 +1,16 @@
+#!/bin/bash
+# A bash script that displays listening ports and the PID and name of the program
+
+echo "Active Internet connections (only servers)"
+echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
+
+# Show TCP sockets in listening state
+ss -ltp | awk '{if($5 == "LISTEN") print $1, $2, $3, $4, $5, $6}'
+
+echo ""
+echo "Active UNIX domain sockets (only servers)"
+echo "Proto RefCnt Flags       Type       State         I-Node   PID/Program name    Path"
+
+# Show UNIX domain sockets in listening state
+ss -lup | awk '{if($5 == "LISTENING") print $1, $2, $3, $4, $5, $6, $7}'
+
