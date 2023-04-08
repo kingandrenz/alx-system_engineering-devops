@@ -36,7 +36,7 @@ defaults
 
 frontend load_balancer
 	bind	0.0.0.0:80
-	bind	0.0.0.0:443 ssl crt /etc/ssl/www.justinmajetich.tech/www.justinmajetich.tech.pem
+	bind	0.0.0.0:443 ssl crt /etc/ssl/www.flexweb.tech/www.flexweb.tech.pem
 	mode	http
 	acl letsencrypt-acl path_beg /.well-known/acme-challenge/
 	use_backend letsencrypt-backend if letsencrypt-acl
@@ -49,5 +49,5 @@ backend letsencrypt-backend
 backend web_servers
 	balance	roundrobin
 	mode	http
-	server	1115-web-01 34.73.76.135:80
-	server	1115-web-02 18.209.20.255:80
+	server	1115-web-01 54.160.122.41:80
+	server	1115-web-02 52.91.165.239:80
