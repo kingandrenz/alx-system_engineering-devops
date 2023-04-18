@@ -48,8 +48,8 @@ frontend clickviral-frontend-https
 
 backend clickviral-backend
     balance roundrobin
-    server 375-web-01 54.160.122.41:80 check
-    server 375-web-02 52.91.165.239:80 check
+    server 115969-web-01 18.210.33.162:80 check
+    server 115969-web-02 18.234.169.236:80 check
 
 backend letsencrypt-backend
 
